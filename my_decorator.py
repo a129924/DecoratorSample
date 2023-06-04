@@ -14,15 +14,12 @@ class MyDecorator:
         return wrapper
 
     def add(self):
-        # print(dir(self.__call__))
 
         def decorator(func):
-            print(f"我是function :{func}")
             print(f"{self.path}")
 
             def wrapper(*args, **kwargs):
                 print("inside wrapper")
-                print(func.__name__)
                 result = func(*args, **kwargs)
                 self.__record_result(result)
                 return result
