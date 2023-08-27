@@ -30,7 +30,7 @@ class Decorator:
         # dosomething
         return self.func(*args, **kwargs)
 
-app = Decorator
+app = Decorator()
 
 @app
 def tst(name: str, age: int) -> str:
